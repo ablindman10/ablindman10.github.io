@@ -15,5 +15,23 @@ Head on over to the [https://crackmes.one/](https://crackmes.one/) website for a
 
 I'm more familiar with Linux RE than I am with anything else. For me this is where I am starting. Instead of downloading each challenge one by one, I'm going to walk through a script I'm going to use to download all the easy Linux crackmes.
 
+Head over to the website and search for all the easy C++ Linux crackmes.
+![placeholder](/images/crackme1.PNG)
 
-![placeholder](/images/crackme1.PNG "Large example image")
+After you have searched just grab that HTML source code. Notice the pattern in the links. I stored this in a file test, which I will use later.
+![placeholder](/images/crackme2.PNG)
+
+Back on the website look at the source code where you can download the link. The general format is https://crackmes.one/static/crackme/5e0fa43b33c5d419aa01351e.zip
+![placeholder](/images/crackme3.PNG)
+
+
+Downloading all these individually would be a pain. Instead I wrote this script to download all of the zips for the easy crackmes.
+![placeholder](/images/crackme4.PNG)
+
+{% highlight sh %}
+grep -oh 'crackme/.*"' website > test
+sed 's/"//' test > test2
+sed -i -e 's/^/https:\/\/crackmes.one\/static\//' test2
+sed -e 's/$/.zip/' -i test2
+wget -i test2
+{% endhighlight %}
