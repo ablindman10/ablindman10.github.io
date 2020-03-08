@@ -54,4 +54,4 @@ wget -i test2
 Finally we read from the file test2 and download all those zips
 
 SUCCESS
-![placeholder](/images/crackme5.PNG)
+![placeholder](/images/crackme5.png)
