@@ -30,8 +30,28 @@ Downloading all these individually would be a pain. Instead I wrote this script 
 
 {% highlight sh %}
 grep -oh 'crackme/.*"' website > test
+{% endhighlight %}
+This find all the references to crackme/stuff in the html source code in the file test
+
+{% highlight sh %}
 sed 's/"//' test > test2
+{% endhighlight %}
+This will remove the " at the end, that I couldn't figure out how to get rid of with grep
+
+{% highlight sh %}
 sed -i -e 's/^/https:\/\/crackmes.one\/static\//' test2
+{% endhighlight %}
+This adds the format https://crackmes.one/static/ at the beginning of the file test2
+
+{% highlight sh %}
 sed -e 's/$/.zip/' -i test2
+{% endhighlight %}
+This this adds a .zip to the end of the file test2
+
+{% highlight sh %}
 wget -i test2
 {% endhighlight %}
+Finally we read from the file test2 and download all those zips
+
+SUCCESS
+![placeholder](/images/crackme5.PNG)
