@@ -14,3 +14,6 @@ Head on over to the [https://crackmes.one/](https://crackmes.one/) website for a
 ### Downloading all the easy Linux challenges
 
 I'm more familiar with Linux RE than I am with anything else. For me this is where I am starting. Instead of downloading each challenge one by one, I'm going to walk through a script I'm going to use to download all the easy Linux crackmes.
+
+
+![placeholder](/images/crackme1.PNG "Large example image")
