@@ -9,7 +9,7 @@ relative_permalinks: false
 # Setup
 title:            ABM
 tagline:          'A Jekyll theme'
-description:      'Join me in learn to Reverse Engineer better.'
+description:      'Join me in learning to Reverse Engineer better.'
 url:              https://ablindman10.github.io/
 baseurl:          /
 
